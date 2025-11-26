@@ -65,8 +65,20 @@ public class Uzd1 {
 				}
 				break;
 
-			}
 			
+			case "4":
+				do {
+					koAtrast = JOptionPane.showInputDialog(null, "Kādu produktu meklēt sarakstā?", "Jautājums", 
+							JOptionPane.INFORMATION_MESSAGE);
+				}while(!koAtrast.matches("^[\\p{L} ]+$"));
+				
+				JOptionPane.showMessageDialog(null, ((saraksts.indexOf(koAtrast))>-1)? "Produkts atrasts "+saraksts.indexOf(koAtrast)+". pozīcijā"
+						: "Produkts netika atrasts sarakstā!", "Informācija", JOptionPane.INFORMATION_MESSAGE);
+				break;
+			
+				//Turpināsim
+				
+			}
 		}while(!izvele.equals("0"));
 
 	}
