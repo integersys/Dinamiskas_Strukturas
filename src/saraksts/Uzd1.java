@@ -129,6 +129,8 @@ public class Uzd1 {
 			case "7":
 				//Papildināt ar pārbaudi, lai indekss nav par lielu/mazu
 				
+				
+				
 				do {
 				kurNonemt = Integer.parseInt(JOptionPane.showInputDialog("Kuras pozīcijas elementu noņemt?"));
 				}while(kurNonemt<0 || kurNonemt >= saraksts.size());
@@ -161,12 +163,6 @@ public class Uzd1 {
 				// pielikt pārbaudes indeksam
 				do {
 					kuruMainit = Integer.parseInt(JOptionPane.showInputDialog("Kura indeksa elementu mainīt?"));
-					if(kuruMainit/1 == kuruMainit) {
-						System.out.println("Ir indekss");
-					}else {
-						kuruMainit = "";
-						break;
-					}
 					
 					arKoAizstat = JOptionPane.showInputDialog("Kāds  būs jaunais produkts");
 				}while(!arKoAizstat.matches("^[\\{L} ]+$")); 
@@ -179,7 +175,7 @@ public class Uzd1 {
 				break;
 				
 			case "12":
-				// papildus paziņojums vai tiešām vēlies visu dzēsts
+				// papildus paziņojums vai 5tiešām vēlies visu dzēsts
 				saraksts.clear();
 				JOptionPane.showMessageDialog(null, "Viss saraksts attīrīts!", "Ziņojums", JOptionPane.WARNING_MESSAGE);
 				break;
